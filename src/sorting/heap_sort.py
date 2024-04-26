@@ -1,3 +1,6 @@
+#  arrr: array
+#  n : the lenght of partial array which need to be heapified 
+#  i :  the original largest
 def heapify(arr, n, i):
     largest = i
     l = 2 * i + 1
@@ -11,7 +14,7 @@ def heapify(arr, n, i):
 
     if largest != i:
         arr[i], arr[largest] = arr[largest], arr[i]
-        heapify(arr, n, largest)
+        heapify(arr, n, largest)  # 考虑对下沉的节点进行继续下沉。
 
 def heapSort(arr):
     n = len(arr)

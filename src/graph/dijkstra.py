@@ -3,7 +3,7 @@ import heapq
 def dijkstra(graph, start):
     distances = {node: float('infinity') for node in graph}
     distances[start] = 0
-    pq = [(0, start)]  # pq means  priority queue
+    pq = [(0, start)] 
     
     while pq:
         current_distance, current_node = heapq.heappop(pq)
