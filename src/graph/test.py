@@ -1,10 +1,10 @@
 import heapq
 
-
 def dijkstra(graph , start_node):
-    distances = { node : float('inf') for node in graph}
+    distances = {node : float('inf') for node in graph}
     distances[start_node] = 0
     pq = [( 0 , start_node)]
+
     while pq:
         current_distance , current_node = heapq.heappop(pq)
         if current_distance > distances[current_node]:
@@ -14,8 +14,9 @@ def dijkstra(graph , start_node):
             if distance < distances[neighbour]:
                 distances[neighbour] = distance
                 heapq.heappush(pq , (distance , neighbour))
-        
+    
     return distances
+
 
 
 
