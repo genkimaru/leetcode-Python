@@ -38,6 +38,6 @@ def min_window(s, t):
     return s[min_start:min_start+min_len]
 
 # 测试
-s = "ADOBECODEBANC"
-t = "ABC"
+s = "a"
+t = "aa"
 print(min_window(s, t))  # 输出"BANC"
